@@ -6,7 +6,7 @@
              xmlns:local="clr-namespace:schoolPaper.View"
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800">
-    <Border Background="Wheat">
+    <Border Background="Wheat" Margin="20">
         <Grid>
             <Grid.RowDefinitions>
                 <RowDefinition Height="100"></RowDefinition>
