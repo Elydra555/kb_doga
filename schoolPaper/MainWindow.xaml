@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:schoolPaper"
         mc:Ignorable="d"
         Title="MainWindow" Height="600" Width="920" Background="Transparent" AllowsTransparency="True" WindowStyle="None">
-   <Border CornerRadius="20" Background="#09152e">
+    <Border CornerRadius="20" Background="#09152e">
         <Grid>
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="150"></ColumnDefinition>

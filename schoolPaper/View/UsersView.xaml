@@ -6,45 +6,32 @@
              xmlns:local="clr-namespace:schoolPaper.View"
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800">
-    <Border CornerRadius="15">
-        <Border.Background>
-            <LinearGradientBrush StartPoint="0,0" EndPoint="0,1">
-                <GradientStop Color="#FF87CEEB" Offset="0.0"/>
-                <GradientStop Color="#FFB0E0E6" Offset="1.0"/>
-            </LinearGradientBrush>
-        </Border.Background>
+    <Border Background="Wheat">
         <Grid>
             <Grid.RowDefinitions>
-                <RowDefinition Height="100"/>
-                <RowDefinition Height="4*"/>
-                <RowDefinition Height="2*"/>
-                <RowDefinition Height="5*"/>
-                <RowDefinition Height="2*"/>
+                <RowDefinition Height="100"></RowDefinition>
+                <RowDefinition Height="4*"></RowDefinition>
+                <RowDefinition Height="1*"></RowDefinition>
             </Grid.RowDefinitions>
             <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="2*"/>
-                <ColumnDefinition Width="5*"/>
+                <ColumnDefinition Width="2*"></ColumnDefinition>
+                <ColumnDefinition Width="5*"></ColumnDefinition>
                 <ColumnDefinition/>
             </Grid.ColumnDefinitions>
+            <TextBlock Text="Information 5" FontSize="25" Foreground="DarkOrange" FontWeight="Bold" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Column="1" Height="34" Width="162"/>
 
-            <TextBlock Text="Product Info" FontSize="25" Foreground="#FF7FFFD4" FontWeight="Bold" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Column="1" Height="34" Width="283"/>
+            <TextBlock Grid.Row="1" Text="Username:" FontSize="20" VerticalAlignment="Center" HorizontalAlignment="Left" Height="26" Width="94" Margin="30,0,0,0"></TextBlock>
 
-            <TextBlock Grid.Row="1" Text="Product Name:" FontSize="20" VerticalAlignment="Center" HorizontalAlignment="Left" Height="26" Width="148" Margin="30,0,0,0"/>
-            <TextBlock Grid.Row="2" Text="Price:" FontSize="20" VerticalAlignment="Center" HorizontalAlignment="Left" Height="26" Width="120" Margin="30,0,0,0"/>
-            <TextBlock Grid.Row="3" Text="Description:" FontSize="20" VerticalAlignment="Center" HorizontalAlignment="Left" Height="26" Width="120" Margin="30,0,0,0"/>
+            <TextBox Grid.Row="1" Grid.Column="1" Margin="0,0,30,0"/>
+            <TextBox Grid.Row="1" Grid.Column="2" Margin="0,0,20,0"></TextBox>
 
-            <TextBox Grid.Row="1" Grid.Column="1" Margin="0,0,30,0" TextChanged="OnTextChanged"/>
-            <TextBox Grid.Row="1" Grid.Column="2" Margin="0,0,20,0"/>
-            <TextBox Grid.Row="2" Grid.Column="1" Margin="0,13,30,14" TextChanged="OnTextChanged"/>
-            <TextBox Grid.Row="2" Grid.Column="2" Margin="0,13,20,14"/>
-            <TextBox Grid.Row="3" Grid.Column="1" Margin="0,13,20,14" TextChanged="OnTextChanged" Grid.ColumnSpan="2"/>
+            <CheckBox Grid.Row="2" Margin="25" VerticalAlignment="Center" Foreground="DarkOrange">Remember me</CheckBox>
 
-            <CheckBox Grid.Row="4" Margin="8" FontSize="16" VerticalAlignment="Center" Foreground="DarkOrange" Checked="OnChecked">This product is on sale </CheckBox>
-
-            <StackPanel Grid.Row="4" Grid.Column="1" Orientation="Horizontal" HorizontalAlignment="Center">
-                <Button Height="20" Width="75" Margin="7, 13" Content="Save" Background="#FF00FF7F" Foreground="White"/>
-                <Button Height="20" Width="75" Margin="7, 13" Content="Reset" Background="#FFCD5C5C"/>
+            <StackPanel Grid.Row="2" Grid.Column="1" Orientation="Horizontal" HorizontalAlignment="Center">
+                <Button Height="30" Width="100" Margin="0, 15" Content="Login" Background="DarkOrange" Foreground="White"></Button>
+                <Button Height="30" Width="100" Margin="5, 15" Content="Cancel" Background="DeepSkyBlue" Command="{Binding openHOme}"></Button>
             </StackPanel>
+
         </Grid>
     </Border>
 </UserControl>

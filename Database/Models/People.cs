@@ -1,10 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Linq;
+﻿using System.ComponentModel;
 using System.Runtime.CompilerServices;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Database.Models
 {
@@ -18,50 +13,89 @@ namespace Database.Models
         public string Name
         {
             get { return name; }
-            set { name = value; OnPropertyChanged(); }
+            set
+            {
+                name = value;
+                OnPropertyChanged();
+            }
         }
 
         private string age;
         public string Age
         {
             get { return age; }
-            set { age = value; OnPropertyChanged(); }
+            set
+            {
+                age = value;
+                OnPropertyChanged();
+            }
         }
 
         private string city;
         public string City
         {
             get { return city; }
-            set { city = value; OnPropertyChanged(); }
+            set
+            {
+                city = value;
+                OnPropertyChanged();
+            }
         }
 
         private string position;
         public string Position
         {
             get { return position; }
-            set { position = value; OnPropertyChanged(); }
+            set
+            {
+                position = value;
+                OnPropertyChanged();
+            }
         }
 
         private string hobby;
-
-        public People(string line)
-        {
-        }
-
         public string Hobby
         {
             get { return hobby; }
-            set { hobby = value; OnPropertyChanged(); }
+            set
+            {
+                hobby = value;
+                OnPropertyChanged();
+            }
         }
 
-        protected void OnPropertyChanged([CallerMemberName] string name = null)
+        public People()
+        {
+            Id = 0;
+        }
+
+        public People(string name, string age, string city, string position, string hobby)
+        {
+            Name = name;
+            Age = age;
+            City = city;
+            Position = position;
+            Hobby = hobby;
+        }
+
+        public People(string sor)
+        {
+            string[] t = sor.Split(';');
+            Name = t[0];
+            Age = t[1];
+            City = t[2];
+            Position = t[3];
+            Hobby = t[4];
+        }
+
+        public override string? ToString()
+        {
+            return $"{Name}, neve a(z) {City} városban lakik, {Position}-ként dolgozik, {Age} éves, hobbija: {Hobby}.";
+        }
+
+        private void OnPropertyChanged([CallerMemberName] string name = null)
         {
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(name));
-        }
-
-        public override string ToString()
-        {
-            return Name;
         }
     }
 }

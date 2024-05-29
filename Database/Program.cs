@@ -19,7 +19,7 @@ namespace Database
 
             if (!db.People.Any())
             {
-                var sorok = File.ReadAllLines(@"\5.csv").Skip(1);
+                var sorok = File.ReadAllLines(@"\Database\5.csv").Skip(1);
                 foreach (var line in sorok)
                 {
                     db.People.Add(new People(line));
